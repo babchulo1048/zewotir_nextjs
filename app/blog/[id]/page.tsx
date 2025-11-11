@@ -138,7 +138,7 @@ export default async function BlogPostPage({
             <span className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
               {post.category}
             </span>
-            <h1 className="text-5xl sm:text-6xl font-bold text-primary mb-6">
+            <h1 className="text-5xl sm:text-5xl font-bold text-primary mb-6">
               {post.title}
             </h1>
             <div className="flex flex-wrap gap-6 text-foreground/70">
