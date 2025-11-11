@@ -18,7 +18,7 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-primary mb-4">
+            <h2 className="text-4xl sm:text-4sxl font-serif font-bold text-primary mb-4">
               Portfolio & <span className="accent-text">Works</span>
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>

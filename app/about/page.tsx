@@ -17,7 +17,7 @@ export default function AboutPage() {
               <div className="max-w-xl mx-auto lg:mx-0">
                 {" "}
                 {/* Added max-w-xl and mx-auto for content block centering */}
-                <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
+                <h1 className="text-4xl sm:text-4xl font-bold text-primary mb-6">
                   About <span className="accent-text">Me</span>
                 </h1>
                 <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
