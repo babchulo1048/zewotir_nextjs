@@ -171,11 +171,11 @@ const RefinedContactContent: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-background">
+    <section id="contact" className="py-10 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold mb-4">
             Let's Connect & <span className="text-accent">Collaborate</span>
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>

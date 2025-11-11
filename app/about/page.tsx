@@ -8,7 +8,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
@@ -20,6 +20,7 @@ export default function AboutPage() {
                 <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
                   About <span className="accent-text">Me</span>
                 </h1>
+                <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
                 <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
                   A versatile Ethiopian media professional with over a decade of
                   experience in strategic communications, media hosting, and
