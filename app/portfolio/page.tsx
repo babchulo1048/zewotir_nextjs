@@ -21,6 +21,7 @@ export default function PortfolioPage() {
             <h1 className="text-5xl sm:text-6xl font-serif font-bold text-primary mb-4">
               Portfolio & <span className="accent-text">Works</span>
             </h1>
+            <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
               Explore a curated collection of my media hosting, MC events, and
               voice work across diverse platforms and audiences.

@@ -9,29 +9,40 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
-                About Me
-              </h1>
-              <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
-                A versatile Ethiopian media professional with over a decade of
-                experience in strategic communications, media hosting, and brand
-                development.
-              </p>
-              <p className="text-lg text-foreground/70 leading-relaxed">
-                My journey in media has been defined by a commitment to
-                authentic storytelling, strategic thinking, and creating
-                meaningful connections between brands and audiences.
-              </p>
+            <div className="text-center lg:text-left">
+              {" "}
+              {/* Added text-center here */}
+              <div className="max-w-xl mx-auto lg:mx-0">
+                {" "}
+                {/* Added max-w-xl and mx-auto for content block centering */}
+                <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
+                  About Me
+                </h1>
+                <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
+                  A versatile Ethiopian media professional with over a decade of
+                  experience in strategic communications, media hosting, and
+                  brand development.
+                </p>
+                <p className="text-lg text-foreground/70 leading-relaxed">
+                  My journey in media has been defined by a commitment to
+                  authentic storytelling, strategic thinking, and creating
+                  meaningful connections between brands and audiences.
+                </p>
+              </div>
             </div>
-            <div className="relative">
-              <div className=" rounded-2xl p-8 shadow-lg">
+            {/* Image container: Added max-width and margin auto for centering */}
+            <div className="relative flex justify-center lg:justify-start">
+              {" "}
+              {/* Centering on small screens */}
+              <div className="rounded-2xl p-4 shadow-lg w-full max-w-sm md:max-w-xs lg:max-w-sm">
+                {" "}
+                {/* Reduced max-width and padding */}
                 <img
                   src="/z-1.png"
                   alt="Zewoti Ralemu Portrait"
-                  className="rounded-lg w-full h-auto"
+                  className="rounded-lg w-full h-auto object-cover" // Ensure object-cover for better scaling
                 />
               </div>
             </div>

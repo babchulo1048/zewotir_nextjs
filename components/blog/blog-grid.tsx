@@ -13,7 +13,7 @@ export function BlogGrid() {
       date: "December 15, 2024",
       category: "PR Strategy",
       readTime: "5 min read",
-      image: "https://placehold.co/800x400/1e293b/fff?text=MEDIA+STORYTELLING",
+      image: "/radio.jpg",
     },
     {
       id: "2",
@@ -23,7 +23,7 @@ export function BlogGrid() {
       date: "December 10, 2024",
       category: "Media Relations",
       readTime: "7 min read",
-      image: "https://placehold.co/800x400/0f172a/fff?text=MEDIA+RELATIONS",
+      image: "/radio.jpg",
     },
     {
       id: "3",
@@ -33,7 +33,7 @@ export function BlogGrid() {
       date: "December 5, 2024",
       category: "Content Strategy",
       readTime: "6 min read",
-      image: "https://placehold.co/800x400/334155/fff?text=CONTENT+STRATEGY",
+      image: "/radio.jpg",
     },
   ];
 
