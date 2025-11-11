@@ -10,8 +10,7 @@ const blogPosts = [
     category: "PR Strategy",
     date: "December 15, 2024",
     readTime: "5 min read",
-    image:
-      "https://placehold.co/1200x400/1e293b/fff?text=MEDIA+STORYTELLING+DETAIL",
+    image: "/radio.jpg",
     content: `
       <p>In today's fast-paced media landscape, storytelling has become more critical than ever. The ability to craft compelling narratives that resonate with audiences across multiple platforms is what separates successful brands from those that fade into obscurity. Zewotir's approach centers on **authenticity and deep audience insight**.</p>
       
@@ -34,8 +33,7 @@ const blogPosts = [
     category: "Media Relations",
     date: "December 10, 2024",
     readTime: "7 min read",
-    image:
-      "https://placehold.co/1200x400/0f172a/fff?text=STRATEGIC+MEDIA+RELATIONS",
+    image: "/radio.jpg",
     content: `
       <p>Strategic media relations is more than just sending out press releases; it's about cultivating mutual respect and trust with journalists and key media figures. This is the foundation upon which lasting brand authority is built.</p>
 
@@ -58,8 +56,7 @@ const blogPosts = [
     category: "Content Strategy",
     date: "December 5, 2024",
     readTime: "6 min read",
-    image:
-      "https://placehold.co/1200x400/334155/fff?text=CONTENT+STRATEGY+DETAIL",
+    image: "/radio.jpg",
     content: `
     <p>In an age where audiences are bombarded with endless content, only the most strategic, value-driven messages stand out. The key to effective content strategy lies not just in what you create, but in **why** and **for whom** you create it. Each piece of content must serve a purpose—educating, inspiring, or converting your audience with intent.</p>
 
