@@ -1,14 +1,34 @@
-"use client";
+// app/portfolio/page.tsx (Refactored to be a Server Component)
 
-import { useState } from "react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { PortfolioGrid } from "@/components/portfolio/portfolio-grid";
-import { PortfolioFilter } from "@/components/portfolio/portfolio-filter";
+// Import the Server-Side fetch function
+import { getPortfolioAssets, PortfolioAsset } from "@/lib/api";
+// Import the new Client Component wrapper
+import { PortfolioContent } from "./portfolio-content";
 
-export default function PortfolioPage() {
-  // 1. Lift the activeFilter state up to the parent component
-  const [activeFilter, setActiveFilter] = useState("all");
+export default async function PortfolioPage() {
+  // 🔑 1. Await the data fetch here. This runs ONLY on the server.
+  // The client receives the fully rendered HTML with the data baked in.
+  let portfolioItems: PortfolioAsset[] = [];
+  try {
+    portfolioItems = await getPortfolioAssets();
+  } catch (error) {
+    console.error(error);
+    // You can implement better error UI here for the client
+    return (
+      <main className="min-h-screen bg-background">
+        <Header />
+        <div className="text-center py-20">
+          <h2 className="text-2xl text-red-500">Error loading portfolio.</h2>
+          <p className="text-muted-foreground">
+            Please check the API connection (http://localhost:3001).
+          </p>
+        </div>
+        <Footer />
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-background">
@@ -28,14 +48,8 @@ export default function PortfolioPage() {
             </p>
           </div>
 
-          {/* Filter - Pass state and setter */}
-          <PortfolioFilter
-            activeFilter={activeFilter}
-            setActiveFilter={setActiveFilter}
-          />
-
-          {/* Grid - Pass active filter so it knows what to display */}
-          <PortfolioGrid activeFilter={activeFilter} />
+          {/* 🔑 2. Pass the fetched data to the Client Component for filtering/interactivity */}
+          <PortfolioContent initialItems={portfolioItems} />
         </div>
       </section>
 

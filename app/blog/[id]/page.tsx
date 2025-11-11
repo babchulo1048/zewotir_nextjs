@@ -1,3 +1,133 @@
+// // app/blog/[id]/page.tsx (Refactored to be a Server Component)
+
+// import { Header } from "@/components/header";
+// import { Footer } from "@/components/footer";
+// import { Calendar, ArrowLeft } from "lucide-react";
+// import Link from "next/link";
+// import Image from "next/image"; // 🔑 Use Image for hero section
+// import { getSingleBlogArticle } from "@/lib/api"; // 🔑 Import single fetch function
+
+// // Helper function to format the date
+// function formatDate(dateString: string): string {
+//   return new Date(dateString).toLocaleDateString("en-US", {
+//     year: "numeric",
+//     month: "long",
+//     day: "numeric",
+//   });
+// }
+
+// // 🔑 This is an async Server Component
+// export default async function BlogPostPage({
+//   params,
+// }: {
+//   params: Promise<{ id: string }>;
+// }) {
+//   const { id } = await params; // 👈 FIXED
+
+//   console.log("id:", id);
+
+//   // 1. Fetch single article content from API
+//   const post = await getSingleBlogArticle(id);
+
+//   if (!post) {
+//     // 2. Handle 404 Not Found
+//     return (
+//       <main className="min-h-screen bg-background">
+//         <Header />
+//         <section className="py-20 px-4 sm:px-6 lg:px-8">
+//           <div className="max-w-3xl mx-auto text-center">
+//             <h1 className="text-4xl font-bold text-primary mb-4">
+//               Article Not Found (ID: {id})
+//             </h1>
+//             <p className="text-lg text-foreground/70 mb-6">
+//               The article you are looking for does not exist or the API is
+//               unavailable.
+//             </p>
+//             <Link href="/blog" className="text-accent hover:underline">
+//               Return to Blog
+//             </Link>
+//           </div>
+//         </section>
+//         <Footer />
+//       </main>
+//     );
+//   }
+
+//   return (
+//     <main className="min-h-screen bg-background">
+//       <Header />
+
+//       {/* Hero Image - Optimized with next/image */}
+//       <div className="relative h-96 overflow-hidden bg-muted">
+//         <Image
+//           src={post.image || "/placeholder.svg"} // Fallback image if API returns null
+//           alt={post.title}
+//           fill
+//           priority // Load immediately as it's the hero image
+//           className="object-cover"
+//         />
+//       </div>
+
+//       {/* Article Content */}
+//       <article className="py-16 px-4 sm:px-6 lg:px-8">
+//         <div className="max-w-3xl mx-auto">
+//           <Link
+//             href="/blog"
+//             className="inline-flex items-center gap-2 text-accent hover:underline mb-8"
+//           >
+//             <ArrowLeft className="h-4 w-4" />
+//             Back to Articles
+//           </Link>
+
+//           <div className="mb-8">
+//             <span className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
+//               {post.category}
+//             </span>
+//             <h1 className="text-5xl sm:text-5xl font-bold text-primary mb-6">
+//               {post.title}
+//             </h1>
+//             <div className="flex flex-wrap gap-6 text-foreground/70">
+//               <div className="flex items-center gap-2">
+//                 <Calendar className="h-5 w-5" />
+//                 {/* 🔑 Use the formatted date */}
+//                 <span>{formatDate(post.createdAt)}</span>
+//               </div>
+//               {/* Note: Read time is static until API provides it */}
+//               <span>6 min read</span>
+//             </div>
+//           </div>
+
+//           {/* 🔑 Use the HTML content from the API */}
+//           <div className="prose prose-invert max-w-none">
+//             <div
+//               className="space-y-6 text-lg leading-relaxed text-foreground/80"
+//               dangerouslySetInnerHTML={{ __html: post.content }}
+//             />
+//           </div>
+
+//           <div className="mt-16 p-8 bg-accent/10 border border-accent/20 rounded-lg">
+//             <h3 className="text-2xl font-bold text-primary mb-4">
+//               Let's Connect
+//             </h3>
+//             <p className="text-foreground/70 mb-6">
+//               Have thoughts on this article? I'd love to hear from you. Feel
+//               free to reach out to discuss media strategy, communications, or
+//               any insights you'd like to share.
+//             </p>
+//             <Link
+//               href="/contact"
+//               className="inline-block bg-accent text-accent-foreground px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
+//             >
+//               Get in Touch
+//             </Link>
+//           </div>
+//         </div>
+//       </article>
+
+//       <Footer />
+//     </main>
+//   );
+// }
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Calendar, ArrowLeft } from "lucide-react";
