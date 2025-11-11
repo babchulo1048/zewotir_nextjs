@@ -26,7 +26,7 @@ export function ContentPreview() {
       title: "Sketch Art Gallery",
       description:
         "A clean grid gallery of personal art—adding warmth and personality.",
-      href: "/portfolio",
+      href: "/art",
     },
   ];
 

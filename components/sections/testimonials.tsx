@@ -21,11 +21,10 @@ export function Testimonials() {
     },
     {
       quote:
-        "A charismatic presence and an incredible ability to connect with people. He commands the stage.",
-      name: "Lulseged T.",
-      title: "Event Organizer, Addis Events",
-      logoUrl: "/addis.png",
-      logoAlt: "Addis Events logo placeholder",
+        "His preparation was meticulous, and his ability to steer a complex conversation with grace and insight created a genuinely engaging dialogue. A true master of media interaction.",
+      name: "H.E. Ambassador [Name]",
+      title: "Ambassador of the Republic of [Country Name]",
+      logoUrl: "demo1.png",
     },
   ];
 
@@ -34,7 +33,7 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4 text-primary">
-            Endorsed by <span className="text-accent">Industry Leaders</span>
+            Testmonials
           </h2>
           {/* Using a simple accent color for the divider line */}
           <div className="w-20 h-1 bg-accent mx-auto mb-8 rounded-full"></div>
