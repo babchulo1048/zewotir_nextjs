@@ -176,7 +176,7 @@ const RefinedContactContent: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4">
-            Connect & <span className="text-accent">Collaborate</span>
+            Let's Connect & <span className="text-accent">Collaborate</span>
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">

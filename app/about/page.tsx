@@ -18,7 +18,7 @@ export default function AboutPage() {
                 {" "}
                 {/* Added max-w-xl and mx-auto for content block centering */}
                 <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
-                  About Me
+                  About <span className="accent-text">Me</span>
                 </h1>
                 <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
                   A versatile Ethiopian media professional with over a decade of

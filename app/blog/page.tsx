@@ -11,7 +11,7 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-6xl font-bold text-primary mb-4">
+            <h1 className="text-5xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
               Latest Insights & <span className="accent-text"> Articles</span>
             </h1>
             <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>

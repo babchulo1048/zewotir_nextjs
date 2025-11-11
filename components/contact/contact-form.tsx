@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, type FormEvent } from "react"
-import { Send, AlertCircle, CheckCircle } from "lucide-react"
+import { useState, type FormEvent } from "react";
+import { Send, AlertCircle, CheckCircle } from "lucide-react";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -12,33 +12,39 @@ export function ContactForm() {
     phone: "",
     subject: "",
     message: "",
-  })
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
-  const [message, setMessage] = useState("")
+  });
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [message, setMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setStatus("loading")
+    e.preventDefault();
+    setStatus("loading");
 
     try {
       // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      setStatus("success")
-      setMessage("Thank you for your message! I'll get back to you soon.")
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setStatus("success");
+      setMessage("Thank you for your message! I'll get back to you soon.");
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
 
       // Reset status after 5 seconds
-      setTimeout(() => setStatus("idle"), 5000)
+      setTimeout(() => setStatus("idle"), 5000);
     } catch (error) {
-      setStatus("error")
-      setMessage("Something went wrong. Please try again.")
+      setStatus("error");
+      setMessage("Something went wrong. Please try again.");
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -59,7 +65,10 @@ export function ContactForm() {
 
       {/* Name */}
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-primary mb-2">
+        <label
+          htmlFor="name"
+          className="block text-sm font-semibold text-primary mb-2"
+        >
           Full Name
         </label>
         <input
@@ -76,7 +85,10 @@ export function ContactForm() {
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-primary mb-2">
+        <label
+          htmlFor="email"
+          className="block text-sm font-semibold text-primary mb-2"
+        >
           Email Address
         </label>
         <input
@@ -93,7 +105,10 @@ export function ContactForm() {
 
       {/* Phone */}
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold text-primary mb-2">
+        <label
+          htmlFor="phone"
+          className="block text-sm font-semibold text-primary mb-2"
+        >
           Phone Number <span className="text-foreground/60">(Optional)</span>
         </label>
         <input
@@ -109,7 +124,10 @@ export function ContactForm() {
 
       {/* Subject */}
       <div>
-        <label htmlFor="subject" className="block text-sm font-semibold text-primary mb-2">
+        <label
+          htmlFor="subject"
+          className="block text-sm font-semibold text-primary mb-2"
+        >
           Subject
         </label>
         <select
@@ -132,7 +150,10 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-primary mb-2">
+        <label
+          htmlFor="message"
+          className="block text-sm font-semibold text-primary mb-2"
+        >
           Message
         </label>
         <textarea
@@ -168,8 +189,9 @@ export function ContactForm() {
 
       {/* Privacy Notice */}
       <p className="text-xs text-foreground/60 text-center">
-        I respect your privacy. Your information will only be used to respond to your inquiry.
+        I respect your privacy. Your information will only be used to respond to
+        your inquiry.
       </p>
     </form>
-  )
+  );
 }
