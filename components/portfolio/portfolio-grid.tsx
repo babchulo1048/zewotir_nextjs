@@ -75,7 +75,8 @@ export function PortfolioGrid({
           filteredItems.map((item, index) => {
             // 🔑 Use the new 'voiceover' category ID
             const isVoiceWork = item.category === "voiceover";
-            const LinkComponent = isVoiceWork ? "div" : "a";
+            // const LinkComponent = isVoiceWork ? "div" : "a";
+            const LinkComponent = "div";
 
             return (
               <LinkComponent
@@ -102,10 +103,10 @@ export function PortfolioGrid({
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority={index < 3} // Prioritize first 3 images for initial load speed
-                    onError={(e) => {
-                      // Fallback logic for image loading errors
-                      e.currentTarget.style.display = "none";
-                    }}
+                    // onError={(e) => {
+                    //   // Fallback logic for image loading errors
+                    //   e.currentTarget.style.display = "none";
+                    // }}
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
