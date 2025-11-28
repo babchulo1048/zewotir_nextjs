@@ -139,6 +139,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* @apply bg-background text-foreground text-lg leading-relaxed; */
   }
 
   h1,
@@ -159,7 +160,17 @@
   /* Fixed: Separated multiple Tailwind classes into proper individual utilities */
   .btn-primary {
     /* Kept btn-primary text as primary as it seems to be meant for a dark background in your system */
-    @apply px-6 py-3 bg-accent text-primary font-semibold rounded-lg hover:opacity-90 transition-colors;
+    /* @apply px-6 py-3 bg-accent text-primary font-semibold rounded-lg hover:opacity-90 transition-colors; */
+    @apply px-6 py-3 bg-accent text-primary font-semibold rounded-lg 
+           transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  /* ⬇️ ADD THIS NEW CUSTOM CLASS FOR THE HERO SECTION ⬇️ */
+  .hero-brand-glow {
+    /* Creates a subtle radial gradient using the accent color variable. */
+    background-image: radial-gradient(at top, color-mix(in srgb, var(--accent) 10%, transparent) 0%, transparent 60%);
+    /* Fallback for older browsers or if color-mix isn't supported */
+    background-image: radial-gradient(at top, rgba(244, 196, 48, 0.1) 0%, transparent 60%);
   }
 
   .btn-secondary {

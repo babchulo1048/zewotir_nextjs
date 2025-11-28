@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { getPortfolioAssets, PortfolioAsset } from "@/lib/api";
 // Import the new Client Component wrapper
 import { PortfolioContent } from "./portfolio-content";
+import { BackToTop } from "@/components/ui/back-to-top";
 
 export default async function PortfolioPage() {
   // 🔑 1. Await the data fetch here. This runs ONLY on the server.
@@ -54,6 +55,7 @@ export default async function PortfolioPage() {
       </section>
 
       <Footer />
+      <BackToTop />
     </main>
   );
 }
