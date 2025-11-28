@@ -56,6 +56,8 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BlogGrid } from "@/components/blog/blog-grid";
+import { BackToTop } from "@/components/ui/back-to-top";
+
 
 export default function BlogPage() {
   return (
@@ -82,6 +84,7 @@ export default function BlogPage() {
       </section>
 
       <Footer />
+      <BackToTop />
     </main>
   );
 }
